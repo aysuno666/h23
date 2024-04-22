@@ -578,6 +578,9 @@ input {
     .about_main{
         width: 100%;
     }
+    .about_main-item-text{
+        max-width: 310px ;
+    }
 }
 @media (max-width: 565px) {
     .hello_content{
@@ -596,9 +599,9 @@ input {
     .about_main{
         width: 100%;
     }
-    .about_main-item-text{
+    /* .about_main-item-text{
         font-size: 1.2rem;
-    }
+    } */
     .about_main-item-text > p {
         /* width: 50%; */
     }
@@ -606,5 +609,8 @@ input {
     .circle{
         width: 37px;
         height: 37px;
+    }
+    .about_main-item-text{
+        max-width: 310px ;
     }
 }
