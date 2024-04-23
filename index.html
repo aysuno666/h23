@@ -13,10 +13,21 @@
                 <img class="logo_img" src="assets/img/RLbnPKehbLjwm0lhEmw38lFoGk4pi0UlTMEvVkQd.png" alt="" srcset="">
             </div>
             <nav class="header_nav">
-                <li><a class="header_nav_link" href="#header">Главная</a></li>
+                <li><a class="header_nav_link" href="#">Главная</a></li>
                 <li><a class="header_nav_link" href="#about">О нас</a></li>
+                <li><a class="header_nav_link" href="#advantages">Преимущества</a></li>
                 <li><a class="header_nav_link" href="#contacts">Контакты</a></li>
             </nav>
+            <div class="menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
+                <ul class="menu-list">
+                    <li><a href="#" class="menu-item">Главная</a><li>
+                    <li><a href="#about" class="menu-item">О нас</a><li>
+                    <li><a href="#advantages" class="menu-item">Преимущества</a><li>
+                    <li><a href="#contacts" class="menu-item">Контакты</a><li>
+                </ul>
+            </div>
         </div>
     </header>
     <!-- <div class="sub-header">
@@ -118,6 +129,38 @@
                 </div>
             </div>
         </div>  
+        <div id="advantages" class="advantages">
+            <div class="advantages_inner">
+                <div class="advantages_wrapper">
+                    
+                    <div class="advantages_title">
+                        <h1>Наши преимущества</h1>
+                    </div>
+                    <div class="advantages_main">
+                        <div class="advantages_main-item">
+                            <img src="assets/img/309.svg" alt="" srcset="">
+                            <h2>Высокое качество услуг</h2>
+                            <p>Применяем строгие стандарты качества</p>
+                        </div>
+                        <div  class="advantages_main-item">
+                            <img src="assets/img/308.svg" alt="" srcset="">
+                            <h2>Низкие цены</h2>
+                            <p>Рассчитаем расходы в минимальную цену</p>
+                        </div>
+                        <div  class="advantages_main-item">
+                            <img src="assets/img/310.svg" alt="" srcset="">
+                            <h2>Соблюдаем сроки</h2>
+                            <p>Доставим товар в указанное время</p>
+                        </div>
+                    </div>
+                    <div class="wrapper_btn_advantages">
+                        <p>Оставьте заявку и мы перезвоним вам в ближайшее время</p>
+                        <button class="btn btn_advantages">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="contacts" class="contacts">
             <div class="contacts_map">
                 <iframe class="contacts_map-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A9fdf4bbed95a312bda49701a5c8f3f110a685fffd6efd61293a1b4e6d6a6b16a&amp;source=constructor" height="400" frameborder="0"></iframe>            
@@ -201,6 +244,18 @@
         modal.style.display = "none";
       }
     }
+    const menuItems = document.querySelectorAll('.menu-item');
+    
+    // Перебираем каждый пункт меню
+    menuItems.forEach(item => {
+        // Добавляем обработчик события click
+        item.addEventListener('click', () => {
+            // Получаем чекбокс меню
+            const checkbox = document.getElementById('burger-checkbox');
+            // Устанавливаем его состояние на unchecked
+            checkbox.checked = false;
+        });
+    });
     </script>
 
 </body>

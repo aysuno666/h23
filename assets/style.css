@@ -2,6 +2,10 @@
     font-family: Rubik;
     src: url('fonts/Rubik-VariableFont_wght.ttf');
 }
+@font-face {
+    font-family: Monstr;
+    src: url('fonts/Montserrat-VariableFont_wght.ttf');
+}
 
 * {
     margin: 0;
@@ -13,7 +17,8 @@ html {
 }
 body{
     font-size: 1.5rem;
-    font-family:  Rubik;
+    /* font-family:  Rubik; */
+    font-family:  Monstr;
 }
 li {
     list-style: none;
@@ -540,7 +545,153 @@ input {
     cursor: pointer;
   }
 
+.advantages{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.advantages_inner{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(51, 56, 96, 0.08);
+}
+
+.advantages_main{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+.advantages_wrapper {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+ }
+.advantages_main-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.advantages_main-item > p {
+    width: 70%;
+}
+.advantages_main-item > img {
+    width: 48px;
+    height: 48px;
+}
+.advantages_title > h1{
+    font-size: 5rem;
+}
+.wrapper_btn_advantages{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.btn_advantages{
+    margin-top: 20px;
+    width: auto;
+    font-size: 1.9rem;
+}
+.menu {
+    display: none;
+}
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+  }
+  .burger::before,
+  .burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #000;
+  }
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #000;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+  }
+  .burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+  }
+  .menu-list {
+    top: 7rem;
+    left: 0;
+    position: absolute;
+    display: grid;
+    gap: 12px;
+    padding: 42px 0;
+    margin: 0;
+    background: rgb(49, 49, 66);
+    list-style-type: none;
+    transform: translateX(-100%);
+    transition: .3s;
+    width: 100%;
+  }
+  .menu-item {
+    display: block;
+    padding: 8px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .menu-item:hover {
+    background: rgba(255,255,255,.2)
+  }
+  .burger-checkbox:checked ~ .menu-list {
+    transform: translateX(0);
+  }
 @media ( max-width: 845px) {
+    .wrapper{
+        margin-top: 10rem;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        z-index: 990;
+    }
     .hello-items-list{
         flex-direction: column;
         gap: 10px;
@@ -612,5 +763,35 @@ input {
     }
     .about_main-item-text{
         max-width: 310px ;
+    }
+}
+@media (max-width: 575px) {
+    .advantages_title > h1 {
+        font-size: 3.3rem;
+    }
+    .advantages_wrapper{
+        height: 100%;
+        gap: 20px;
+    }
+    .advantages_main{
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+    }
+    .btn_advantages{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 585px) {
+    .header_nav{
+        display: none;
+    }
+    .header_inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu {
+        display: block;
+        z-index: 9999;
     }
 }
