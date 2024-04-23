@@ -464,17 +464,17 @@ input {
     flex-direction: column;
 }
 .contacts_title{
-    text-align: center;
+    text-align: left; 
     display: flex;
     flex-direction: column;
-    width: 70%;
-    align-items: center;
-    justify-content: center;
+    /* width: 53%; */
+    align-items: start;
+    justify-content: start;
     gap: 10px;
 }
 .contacts_title > p {
     width: 70%;
-    text-align: center;
+    text-align: left;
 }
 .contacts_title > h1{
     font-size: 4rem;
@@ -493,6 +493,7 @@ input {
 }
 .btn_tel{
     margin-top: 20px;
+    width: auto;
 }
 
 .call > h1 {
@@ -684,7 +685,7 @@ input {
   }
 @media ( max-width: 845px) {
     .wrapper{
-        margin-top: 10rem;
+        margin-top: 7rem;
     }
     .header {
         position: fixed;
@@ -698,7 +699,6 @@ input {
     }
     .contacts_title > p {
         width: 100%;
-        text-align: center;
     }
     .contacts_list-num{
         font-size: 1.6rem;
@@ -781,6 +781,10 @@ input {
     .btn_advantages{
         margin-bottom: 20px;
     }
+    .wrapper_btn_advantages > p{
+        width: 70%;
+        text-align: center;
+    }
 }
 @media (max-width: 585px) {
     .header_nav{
@@ -793,5 +797,8 @@ input {
     .menu {
         display: block;
         z-index: 9999;
+    }
+    .contacts_map {
+        height: 45%;
     }
 }
