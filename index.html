@@ -77,16 +77,16 @@
                 </div>
                 <div class="form">
                     <h1>Оформить заявку</h1>
-                    <form action="" class="">
+                    <form action="mail.php" method="POST" class="">
                         <label for=""> <span class="colortext-red">*</span>Имя</label>
-                        <input type="text">
+                        <input name="name" type="text">
                         <label for=""> <span class="colortext-red">*</span>Телефон</label>
-                        <input type="tel">
+                        <input name="tel" type="tel">
                         <label for=""> Почта</label>
-                        <input type="email">
+                        <input name="mail" type="email">
 
                         <div class="form_btn_wrapper">
-                            <button class="form_btn"> Отправить</button>
+                            <button type="submit" class="form_btn"> Отправить</button>
                         </div>
                     </form>
                 </div>
